@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="faviconio-logo.zip">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Kumbh+Sans:wght@100;300;400;600;700;800;900&family=Montserrat:wght@500;600;700;900&family=Oswald:wght@200;400;500;600;700&family=Poppins:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Shortly</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAV CONTAINER -->
+    <nav class="relative container mx-auto p-6 ">
+        <!-- flex container for all item -->
+        <div class="flex items-center justify-between navv">
+            <!-- Flex container for logo -->
+
+            <div class="flex items-center space-x-20 navv1">
+                <!-- logo -->
+                <img src="images/logo.svg" alt="">
+                <!-- left -->
+                <div class="hidden space-x-8 font-bold lg:flex">
+                    <a href="#" class="text-grayishVoilet hover:text-varyDarkViolet">Feature</a>
+                    <a href="#" class="text-grayishVoilet hover:text-varyDarkViolet">Pricing</a>
+                    <a href="#" class="text-grayishVoilet hover:text-varyDarkViolet">Resources</a>
+                </div>
+            </div>
+            <!-- RIGHT BUTTON -->
+            <div class="hidden lg:flex lg:gap-3 items-center spacex-6 font-bold text-grayishViolet navv2">
+                <div class="hover:text-veryDarkViolet">Log in</div>
+                <a href="#" class="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70">Sign up</a>
+            </div>
+            <!-- a to do hamburger -->
+            <button id="menu-btn" class=" block hamburger lg:hidden focus:outline-none" type="button">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+
+        </div>
+        <!--  mobile menu -->
+        <div id="menu" class="absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100">
+            <div
+                class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white text-center rounde-sm">
+                <a href="#" class="w-full text-center">Feature</a>
+                <a href="#" class="w-full text-center">Pricing</a>
+                <a href="#" class="w-full text-center">Resources</a>
+                <a href="#" class="w-full pt-6 border-t border-gray-400 text-center">Login in</a>
+                <a href="#" class="w-full py-3 text-center rounded-full bg-cyan">Sign up</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <!-- Hero contianer -->
+        <div class="container flex flex-col-reverse mx-auto p-6 xl:flex-row">
+            <!-- Content container -->
+            <div class="flex flex-col space-y-10 mb-44 lg:mt-16 xl:mb-44 lg:w-1/2">
+                <h1 class="work text-5xl font-bold text-center lg:text-6xl lg:max-w-md lg:text-left">
+                    More Than Just Link
+                </h1>
+                <p class="work2 text-2xl text-center text-gray-400 lg:max-w-md lg:text-left">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex officia, dolorum doloremque
+                    possimus repellendus. Esse quisquam natus non alias nam ex quas numquam sed!
+                </p>
+                <div class="work3 mx-auto lg:mx-0">
+                    <a href=""
+                        class="py-5 px-10 text-2xl font-bold text-white bg-cyan rounded-full lg:py-4 hover:opacity-70">Get
+                        started</a>
+                </div>
+            </div>
+            <!-- IMAGE -->
+            <div class="mb-24 mx-auto md:w-180 lg:w-1/2 lg:mb-0 ">
+                <img class="working" src="images/illustration-working.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Shorten section -->
+    <section id="shorten" class="relative bg-gray-100 ">
+        <!-- SHORTEN CONTAINER -->
+        <div class="max-w-4xl mx-auto p-6 space-y-6">
+            <!-- FORM -->
+            <form action="" id="link-form"
+                class="relative flex flex-col w-full p-10 -mt-20 space-y-4 bg-darkViolet rounded-lg md:flex-row md:space-y-0 md:space-x-3">
+                <input type="text" class="flex-1 p-3 border-2 rounded-lg placeholder-yellow-500 focus:outline-none"
+                    placeholder="shorten a link here" id="link-input">
+                <button
+                    class="px-10 py-3 text-white bg-cyan rounded-lg hover:bg-cyanLight focus:outline-none md:py-2  ">Shorten
+                    it</button>
+                <!-- ERROR MESSAGE -->
+                <div class="absolute lef-7 bottom-3 text-red text-small" id="err-msg">
+
+                </div>
+            </form>
+            <!-- link1 -->
+            <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
+                <p class="font-bold text-center text-veryDarkViolet md:text-left">
+                    https://frontendmentoe.io
+                </p>
+                <div class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0">
+                    <div class="fontbold text-cyan">
+                        https://rel.ink/K67Kyk
+                    </div>
+                    <button
+                        class="p-2 text-white bg-cyan py-3 px-5 rounded-lg hover:opacity-70 focus:outline-none">Copy</button>
+                </div>
+            </div>
+
+            <!-- link 2 -->
+            <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
+                <p class="font-bold text-center text-veryDarkViolet md:text-left">
+                    https://frontendmentoe.io
+                </p>
+                <div class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0">
+                    <div class="fontbold text-cyan">
+                        https://rel.ink/K67Kyk
+                    </div>
+                    <button
+                        class="p-2 text-white bg-varyDarkViolet py-3 px-5 rounded-lg hover:opacity-70 focus:outline-none">Copy</button>
+                </div>
+            </div>
+
+            <!-- link 3 -->
+            <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
+                <p class="font-bold text-center text-veryDarkViolet md:text-left">
+                    https://frontendmentoe.io
+                </p>
+                <div class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0">
+                    <div class="fontbold text-cyan">
+                        https://rel.ink/K67Kyk
+                    </div>
+                    <button
+                        class="p-2 text-white bg-cyan py-3 px-5 rounded-lg hover:opacity-70 focus:outline-none">Copy</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATS SECTION -->
+    <section id="stats" class="py-24 bg-gray-100 ">
+        <div id="" class=" container mx-auto px-3 ">
+            <h2 class="text-4xl mb-6 font-bold text-center">Advance Statistics</h2>
+            <p class="max-w-xs mx-auto text-center text-gray-400 md:mx-w-md">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iste magnam expedita sed repellendus
+                sapiente exercitationem, voluptatem pariatur voluptatibus voluptate est quae similique velit accusamus?
+            </p>
+        </div>
+    </section>
+    <!-- Feature box -->
+    <section id="features" class="pb-32 bg-gray-100">
+        <div class="container relative flex flex-col items-start px-6 mx-auto md:flex-row md:space-x-7">
+            <!-- HORIZONTAL -->
+            <div class="hidden absolute top-24 left-16 h-3 bg-cyan md:block w-10/12"></div>
+            <!-- VERTICAL LINE -->
+            <div class="absolute w-2 left-1/2 h-full -ml-1 bg-cyan md:hidden">
+
+            </div>
+            <!-- box1 -->
+            <div class="relative flex flex-col space-y-6 bg-white rounded-lg md:1/3">
+                <!-- img position -->
+                <div class="absolute -ml-10 left-1/2 -top-10 md:left-16">
+                    <!-- IMAGE CONTAINER FOR BACKGROUND & CENTER -->
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-varyDarkViolet"><img
+                            src="images/icon-brand-recognition.svg" alt="">
+                    </div>
+                </div>
+                <h5 class="pt-6 text-xl font-bold text-center capitalize md:text-left">Brand-recognition<h5>
+                        <p class="text-center text-gray-400 md:text-left">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Iure doloribus inventore sequi obcaecati, ea placeat aliquid deserunt
+                            dolor magnam fuga quibusdam, et nam repudiandae sunt!</p>
+            </div>
+
+            <!-- BOX 2 -->
+            <div class="relative flex flex-col mt-24 space-y-6 bg-white rounded-lg md:1/3 md:mt-8">
+                <!-- img position -->
+                <div class="absolute -ml-10 left-1/2 -top-10 md:left-16">
+                    <!-- IMAGE CONTAINER FOR BACKGROUND & CENTER -->
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-varyDarkViolet"><img
+                            src="images/icon-detailed-records.svg" alt="">
+                    </div>
+                </div>
+                <h5 class="pt-6 text-xl font-bold text-center capitalize md:text-left">Detail record<h5>
+                        <p class="text-center text-gray-400 md:text-left">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Iure doloribus inventore sequi obcaecati, ea placeat aliquid deserunt
+                            dolor magnam fuga quibusdam, et nam repudiandae sunt!</p>
+            </div>
+
+            <!-- BOX 3-->
+            <div class="relative flex flex-col mt-24 space-y-6 bg-white rounded-lg md:1/3 md:mt-16">
+                <!-- img position -->
+                <div class="absolute -ml-10 left-1/2 -top-10 md:left-16">
+                    <!-- IMAGE CONTAINER FOR BACKGROUND & CENTER -->
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-varyDarkViolet"><img
+                            src="images/icon-fully-customizable.svg" alt="">
+                    </div>
+                </div>
+                <h5 class="pt-6 text-xl font-bold text-center capitalize md:text-left">Fully Customazable<h5>
+                        <p class="text-center text-gray-400 md:text-left">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Iure doloribus inventore sequi obcaecati, ea placeat aliquid deserunt
+                            dolor magnam fuga quibusdam, et nam repudiandae sunt!</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA SECTION -->
+    <section id="cta" class="py-24 bg-darkViolet">
+        <div class="flex flex-col p-2 space-y-6">
+            <h5 class="mx-auto space-y-10 text-4xl font-bold text-center text-white">Boost your links today</h5>
+            <button
+                class="px-10 py-5 mx-auto text-2xl font-bold text-white rounded-full bg-cyan hover:bg-cyanLight md:text-base md:py-3 focus:outline-none">Get
+                started</button>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-16 bg-varyDarkViolet">
+        <div
+            class="container flex flex-col items-center justify-between mx-auto space-y-6 md:flex-row md:space-y-0 md:items-start">
+            <!-- LOGO -->
+            <img class="z-10" src="images/logo1.svg" alt="">
+            <!-- nemus container -->
+            <div class="flex flex-col space-y-16 md:space-x-20 md:flex-row md:space-y-0">
+                <!-- meu 1 -->
+                <div class="flex flex-col items-center w-full md:items-start">
+                    <div class="mb-5 font-bold text-white capitalize">Features</div>
+                    <div class="flex flex-col items-center y md:items-start">
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Link shortening</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Branding</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Analytics</a>
+
+                    </div>
+                </div>
+
+
+                <!-- meu 1 -->
+                <div class="flex flex-col items-center w-full md:items-start">
+                    <div class="mb-5 font-bold text-white capitalize">Features</div>
+                    <div class="flex flex-col items-center y md:items-start">
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Link shortening</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Branding</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Analytics</a>
+
+                    </div>
+                </div>
+
+                <!-- meu 1 -->
+                <div class="flex flex-col items-center w-full md:items-start">
+                    <div class="mb-5 font-bold text-white capitalize">Features</div>
+                    <div class="flex flex-col items-center y md:items-start">
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Link shortening</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Branding</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Analytics</a>
+
+                    </div>
+                </div>
+
+
+                <!-- meu 1 -->
+                <div class="flex flex-col items-center w-full md:items-start">
+                    <div class="mb-5 font-bold text-white capitalize">Features</div>
+                    <div class="flex flex-col items-center y md:items-start">
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Link shortening</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Branding</a>
+                        <a href="" class="capitalize bg-grayishViolet hover:text-cyan">Analytics</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- SOCIAL CONTAINER -->
+            <div class="flex space-x-6">
+                <a href="#">
+                    <img class="ficon" src="images/icon-facebook.svg" alt="">
+                </a>
+                <a href="#">
+                    <img class="ficon" src="images/icon-pinterest.svg" alt="">
+                </a>
+                <a href="#">
+                    <img class="ficon" src="images/icon-instagram.svg" alt="">
+                </a>
+                <a href="#">
+                    <img class="ficon" src="images/icon-twitter.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <i class="fa fa-arrow-up" aria-hidden="true" id="scrolltop"></i>
+    <script src="just.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="gsap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="query.js"></script>
+
+</body>
+
+</html>
